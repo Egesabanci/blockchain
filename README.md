@@ -27,7 +27,7 @@ Firstly, clone this repository with the following command:
 >>> git clone https://github.com/Egesabanci/blockchain
 ```
 
-After cloning create virtual environment with the following commands:
+After cloning, create virtual environment with the following commands:
 ```
 >>> cd blockchain
 >>> virtualenv .
@@ -36,8 +36,8 @@ After cloning create virtual environment with the following commands:
 >>> cd .. 
 ```
 
-If there is an error, you probably don't have a ```virtualenv``` package
-Download ```virtualenv``` with the following command:
+If there is an error, you probably don't have a `virtualenv` package
+Download `virtualenv` with the following command:
 ```
 >>> pip install virtualenv
 ```
