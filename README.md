@@ -16,7 +16,8 @@ retroactively without alteration of all subsequent blocks. For use as a
 distributed ledger, a blockchain is typically managed by a peer-to-peer 
 network collectively adhering to a protocol for inter-node communication
 and validating new blocks.
-[Wikipedia Article about Blockchain](https://en.wikipedia.org/wiki/Blockchain)
+[(Wikipedia Article about Blockchain)](https://en.wikipedia.org/wiki/Blockchain)
 
 ##### Sample Bitcoin structure
 (Bitcoin is created with Blockchain systems. It is the first practical usage of Blockchain strcuture)
+![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/blockchain_structure.png)
