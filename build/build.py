@@ -1,7 +1,6 @@
 import os
 import argparse
 
-
 # get flags from command line
 parser = argparse.ArgumentParser()
 parser.add_argument("--venv", action = "store_true")
