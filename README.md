@@ -20,3 +20,31 @@ and validating new blocks.
 
 ##### Sample Bitcoin structure (Created with Blockchain systems)
 ![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/bitcoin_structure.png)
+
+### Installation
+Firstly, clone this repository with the following command:
+```
+>>> git clone https://github.com/Egesabanci/blockchain
+```
+
+After cloning create virtual environment with the following commands:
+```
+>>> cd blockchain
+>>> virtualenv .
+>>> cd Scripts
+>>> activate
+>>> cd .. 
+```
+
+If there is an error, you probably don't have a ```virtualenv``` package
+Download ```virtualenv``` with the following command:
+```
+>>> pip install virtualenv
+```
+
+Install required packages:
+```
+>>> cd build
+>>> pip install -r requirements.txt
+>>> cd ..
+```
