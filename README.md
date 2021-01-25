@@ -19,4 +19,4 @@ and validating new blocks.
 [(Wikipedia Article about Blockchain)](https://en.wikipedia.org/wiki/Blockchain)
 
 ##### Sample Bitcoin structure (Created with Blockchain systems)
-![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/blockchain_structure.png)
+![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/bitcoin_structure.png)
