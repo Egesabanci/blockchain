@@ -23,27 +23,27 @@ and validating new blocks.
 
 ### Installation
 Firstly, clone this repository with the following command and go into it:
-```
+```cmd
 >>> git clone https://github.com/Egesabanci/blockchain
 >>> cd blockchain
 ```
 
 After cloning, create virtual environment with the following commands:
-```
+```cmd
 >>> virtualenv .
 >>> cd Scripts
 >>> activate
 >>> cd .. 
 ```
 
-**If there is an error**, you probably don't have a `virtualenv` package
-**Download `virtualenv` with the command below and try the previous commands again**:
-```
+**If there is an error**, you probably don't have a `virtualenv` package.
+Download `virtualenv` with the command below and try the previous commands again:
+```cmd
 >>> pip install virtualenv
 ```
 
 Install required packages:
-```
+```cmd
 >>> cd build
 >>> pip install -r requirements.txt
 >>> cd ..
