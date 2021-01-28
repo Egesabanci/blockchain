@@ -18,26 +18,26 @@ network collectively adhering to a protocol for inter-node communication
 and validating new blocks.
 [(Wikipedia Article about Blockchain)](https://en.wikipedia.org/wiki/Blockchain)
 
-##### Sample Bitcoin structure (Created with Blockchain systems)
+##### Sample Bitcoin structure (Created with Blockchain infastructure)
 ![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/bitcoin_structure.png)
 
 ### Installation
-Firstly, clone this repository with the following command:
+Firstly, clone this repository with the following command and go into it:
 ```
 >>> git clone https://github.com/Egesabanci/blockchain
+>>> cd blockchain
 ```
 
 After cloning, create virtual environment with the following commands:
 ```
->>> cd blockchain
 >>> virtualenv .
 >>> cd Scripts
 >>> activate
 >>> cd .. 
 ```
 
-If there is an error, you probably don't have a `virtualenv` package
-Download `virtualenv` with the following command:
+**If there is an error**, you probably don't have a `virtualenv` package
+**Download `virtualenv` with the command below and try the previous commands again**:
 ```
 >>> pip install virtualenv
 ```
