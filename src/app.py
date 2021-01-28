@@ -4,3 +4,4 @@ from flask import Flask
 app = Flask(__name__)
 
 # all routes from routes.py
+from .routes import *

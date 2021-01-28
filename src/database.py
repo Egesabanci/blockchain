@@ -2,21 +2,27 @@ import os
 import yaml
 from flask_sqlalchemy import SQLAlchemy
 
-from app import app
+from .app import app
 
 # configurations
-with open("config.yml", "r") as configurations:
-	cfg = yaml.safe_load(configurations)["config"]
+with open(os.path.join(os.getcwd(), "src", "config.yml"), "r") as config:
+	cfg = yaml.safe_load(config)["config"]
+
+# create database folder in current path
+DB_PATH = os.path.join(os.getcwd(), "src")
+if "database" not in os.listdir(DB_PATH):
+	os.mkdir(os.path.join(DB_PATH, "database"))
 
 # database configuration
-app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:////{cfg["db_name"]}"
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] cfg["track_modifications"]
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database/" + cfg["db_name"]
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = cfg["track_modifications"]
 
 # main database instance
 db = SQLAlchemy(app)
 
-# create database if not exists
-if cfg["db_name"] not in os.listdir(os.getcwd()):
-	db.create_all()
+# all models from models.py
+from .models import *
 
-# all models of the database
+# create database if not exists in "current_path/database"
+if os.listdir(os.path.join(DB_PATH, "database")) == []:
+	db.create_all()
