@@ -8,6 +8,10 @@ Lib/
 Scripts/
 *.cfg
 
+# ignore database folders and files
+*.db
+database/
+
 # C extensions
 *.so
 
