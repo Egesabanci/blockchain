@@ -3,10 +3,7 @@ import yaml
 from flask_sqlalchemy import SQLAlchemy
 
 from .app import app
-
-# configurations
-with open(os.path.join(os.getcwd(), "src", "config.yml"), "r") as config:
-	cfg = yaml.safe_load(config)["config"]
+from .app import cfg 
 
 # create database folder in current path
 DB_PATH = os.path.join(os.getcwd(), "src")
