@@ -10,6 +10,6 @@ with open(os.path.join("src", "config.yml"), "r") as config:
 
 # run the server
 if __name__ == "__main__":
-	app.run(host	= cfg["host"], 
-					port 	= cfg["port"],
-					debug = cfg["debug"])
+	app.run(host = cfg["host"],
+		port = cfg["port"],
+		debug = cfg["debug"])
