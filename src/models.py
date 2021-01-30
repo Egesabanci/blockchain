@@ -1,0 +1,17 @@
+import datetime
+
+from .database import db
+
+# main database model - blockchain class
+class Blockchain(db.Model):
+	block_number = db.Column(db.Integer, primary_key = True)
+	block_id		 = db.Column(db.String(32), unique = True, nullable = False)
+	block_hash	 = db.Column(db.String(64), unique = True, nullable = False)
+	block_data	 = db.Column(db.String(255), nullable = False)
+	block_date 	 = db.Column(db.String(26), default = self.__get_now())
+
+	def __get_now(self):
+		return str(datetime.datetime.now())
+
+	def __repr__(self):
+		return f"<Block {self.block_id}>"
