@@ -1,5 +1,5 @@
-import datetime.datetime as time
 from uuid import uuid4
+import datetime.datetime as time
 
 from .database import db
 
