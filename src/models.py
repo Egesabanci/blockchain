@@ -1,5 +1,5 @@
+import datetime
 from uuid import uuid4
-import datetime.datetime as time
 
 from .database import db
 
@@ -9,7 +9,7 @@ class Blockchain(db.Model):
 	block_id		 = db.Column(db.String(32), unique = True, nullable = False, default = uuid4().hex)
 	block_hash	 = db.Column(db.String(64), unique = True, nullable = False)
 	block_data	 = db.Column(db.String(255), nullable = False)
-	block_date 	 = db.Column(db.String(26), default = time.now())
+	block_date 	 = db.Column(db.String(26), default = datetime.datetime.now())
 
 	def __repr__(self):
 		return f"<Block {self.block_id}>"
