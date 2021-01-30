@@ -5,7 +5,7 @@ from .database import db
 from .models import Blockchain
 
 # index route - serving main.html, get chain info
-@app.route("/", methods = ["GET", "POST"])
+@app.route("/", methods = ["GET"])
 def index():
 	if request.method == "GET":
 		return render_template("main.html")
