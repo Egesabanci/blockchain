@@ -34,9 +34,10 @@ def add_block():
 	if request.method == "POST":
 		chain = Blockchain(database_instance = Chain)
 		form_data = request.form["data"]
+		data = form_data if form_data is not None else request.args.get("data")
 
 		# new created block
-		new_block = chain.hash_block(data = form_data)
+		new_block = chain.hash_block(data = data)
 		new_block_instance = Chain(block_id = new_block.block_id,
 			block_hash = new_block.block_hash,
 			block_data = new_block.block_data,
