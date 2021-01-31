@@ -3,14 +3,14 @@ from flask import jsonify
 
 from .app import app
 from .database import db
-from .models import Blockchain
+from .models import Block
 
 # index route - serving main.html, get chain info
 @app.route("/", methods = ["GET"])
 def index():
 	if request.method == "GET":
 		# get all info from database
-		query = Blockchain.query.all()
+		query = Block.query.all()
 
 		# parse all info
 		info = {
