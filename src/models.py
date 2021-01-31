@@ -3,6 +3,7 @@ from uuid import uuid4
 
 from .database import db
 
+
 # main database model - blockchain class
 class Chain(db.Model):
 	block_number = db.Column(db.Integer, primary_key = True)
