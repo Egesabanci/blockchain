@@ -46,13 +46,21 @@
 							<hr>
 							<ul class = "list-group">
 								<li class = "list-group-item d-flex justify-content-around">
-									<h4>Placeholder</h4>
-									<h4>450,123</h4>
+									<h4>Number of Blocks</h4>
+									<h4 class = "text-muted">{{ context["num_of_blocks"] }}</h4>
 								</li>	
 								<li class = "list-group-item d-flex justify-content-around">
-									<h4>Placeholder2</h4>
-									<h4>450,123</h4>
+									<h4>Final Block's Hash</h4>
+									<h4 class = "text-muted">{{ context["final_block_hash"] }}</h4>
 								</li>	
+								<li class = "list-group-item d-flex justify-content-around">
+									<h4>Last Added Block</h4>
+									<h4 class = "text-muted">{{ context["last_block_date"] }}</h4>
+								</li>	
+								<li class = "list-group-item d-flex justify-content-around">
+									<h4>Genesis Block's Hash</h4>
+									<h4 class = "text-muted">{{ context["genesis_block_hash"] }}</h4>
+								</li>
 							</ul>
 						</div>
 					</div>

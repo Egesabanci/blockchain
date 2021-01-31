@@ -9,7 +9,18 @@ from .models import Blockchain
 @app.route("/", methods = ["GET"])
 def index():
 	if request.method == "GET":
-		return render_template("main.html")
+		# get all info from database
+		query = Blockchain.query.all()
+
+		# parse all info
+		info = {
+			"num_of_blocks": len(query),
+			"final_block_hash": query[-1].block_hash,
+			"last_block_date": query[-1].block_date,
+			"genesis_block_hash": query[0].block_hash  
+		}
+
+		return render_template("main.html", context = info)
 
 	else:
 		return jsonify({"message" : "request is not valid"})
