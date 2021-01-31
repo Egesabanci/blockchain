@@ -50,3 +50,24 @@ def add_block():
 
 	else:
 		return jsonify({"message" : "request is not valid"})
+
+# get_info route - get info for command-line usage
+@app.route("/get_info", methods = ["GET"])
+def get_info():
+	if request.method == "GET":
+		query = Chain.query.all()
+
+		info = {
+			"num_of_blocks": len(query),
+			"final_block_id": query[-1].block_id,
+			"final_block_hash": query[-1].block_hash,
+			"last_block_date": query[-1].block_date[0:19],
+			"genesis_block_hash": query[0].block_hash,
+			"genesis_block_date": query[0].block_date[0:19],
+			"final_block_data": query[-1].block_data
+		}
+
+		return jsonify(info)
+
+	else:
+		return jsonify({"message" : "request is not valid"})

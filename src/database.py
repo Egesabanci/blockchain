@@ -6,11 +6,11 @@ from .app import cfg
 
 # create database folder in current path
 DB_PATH = os.path.join(os.getcwd(), "src")
-if "database_src" not in os.listdir(DB_PATH):
-	os.mkdir(os.path.join(DB_PATH, "database_src"))
+if "database" not in os.listdir(DB_PATH):
+	os.mkdir(os.path.join(DB_PATH, "database"))
 
 # database configuration
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database_src/" + cfg["db_name"]
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database/" + cfg["db_name"]
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = cfg["track_modifications"]
 
 # main database instance
@@ -23,7 +23,7 @@ from .blockchain import Blockchain
 from .models import *
 
 # create database if not exists in "current_path/database"
-if os.listdir(os.path.join(DB_PATH, "database_src")) == []:
+if os.listdir(os.path.join(DB_PATH, "database")) == []:
 	db.create_all()
 
 # if there is no blocks - create genesis block

@@ -1,5 +1,3 @@
-import argparse
-
 from src.app import app
 from src.app import cfg
 
