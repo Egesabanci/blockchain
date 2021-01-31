@@ -21,9 +21,9 @@
 							</h2>
 							<hr>
 							<!--Adding blocks section-->
-							<form class = "form-group" method = "#">
+							<form class = "form-group" method = "POST" action = "/add">
 								<div class="form-floating">
-							  	<textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea1" style="height: 100px"></textarea>
+							  	<textarea class="form-control" id="floatingTextarea1" name = "data" style="height: 100px"></textarea>
 							  	<label for="floatingTextarea">Add data to the block</label>
 								</div>
 								<button class = "btn btn-large mt-2 btn-primary" onclick = "submitEvent()" type = "submit">Add Block</button>
