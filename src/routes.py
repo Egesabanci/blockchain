@@ -3,20 +3,20 @@ from flask import jsonify
 
 from .app import app
 from .database import db
-from .models import BlockData
+from .models import Chain
 
 # index route - serving main.html, get chain info
 @app.route("/", methods = ["GET"])
 def index():
 	if request.method == "GET":
 		# get all info from database
-		query = BlockData.query.all()
+		query = Chain.query.all()
 
 		# parse all info
 		info = {
 			"num_of_blocks": len(query),
-			"final_block_hash": query[-1].block_hash,
-			"last_block_date": query[-1].block_date,
+			"final_block_id": query[-1].block_id,
+			"last_block_date": query[-1].block_date[0:19],
 			"genesis_block_hash": query[0].block_hash  
 		}
 
