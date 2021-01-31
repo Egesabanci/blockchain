@@ -7,7 +7,7 @@
 </head>
 <body>
 
-	<div class = "row mt-5">
+	<div class = "row mt-5 mb-5">
 		<div class = "col-12">
 			<div class = "row justify-content-center">
 				<div class = "col-9">
@@ -23,10 +23,10 @@
 							<!--Adding blocks section-->
 							<form class = "form-group" method = "POST" action = "/add">
 								<div class="form-floating">
-							  	<textarea class="form-control" id="floatingTextarea1" name = "data" style="height: 100px"></textarea>
+							  	<textarea class="form-control" id="floatingTextarea1" placeholder = "This is placeholder" name = "data" style="height: 100px"></textarea>
 							  	<label for="floatingTextarea">Add data to the block</label>
 								</div>
-								<button class = "btn btn-large mt-2 btn-primary" onclick = "submitEvent()" type = "submit">Add Block</button>
+								<button class = "btn btn-large mt-2 btn-primary" type = "submit">Add Block</button>
 							</form>
 						</div>
 					</div>
@@ -56,9 +56,15 @@
 									<span class="badge badge-primary text-wrap bg-dark p-3" style="width: 16rem;">
 									  {{ context["final_block_id"] }}
 									</span>
-								</li>	
+								</li>
 								<li class = "list-group-item d-flex justify-content-between">
-									<h4 class = "d-flex align-items-center">Last Added Date</h4>
+									<h4 class = "d-flex align-items-center">Last Block's Data</h4>
+									<span class="badge badge-primary text-wrap bg-dark p-3" style="width: 16rem;">
+									  {{ context["final_block_data"] }}
+									</span>
+								</li>
+								<li class = "list-group-item d-flex justify-content-between">
+									<h4 class = "d-flex align-items-center">Last Block's Date</h4>
 									<span class="badge badge-primary text-wrap bg-dark" style="width: 16rem;">
 									  <h4 class = "text-wrap text-light pt-1">{{ context["last_block_date"] }}</h4>
 									</span>
@@ -76,13 +82,6 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		// prevent refreshing on submit
-		const submitEvent = (e) => {
-			e.preventDefault()
-		}
-	</script>
 
 	<!--Adding JS part of the Bootstrap-->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

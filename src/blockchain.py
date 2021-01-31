@@ -33,11 +33,11 @@ class Blockchain(object):
 
 	def hash_block(self, data):
 		# hashing block with given data
-		previous_hash = self.previous_hash()
-		block_id = uuid4().hex
+		previous_hash = str(self.previous_hash())
+		block_id = str(uuid4().hex)
 		block_date = str(datetime.now())
 
-		hash_instance = str(previous_hash + block_id + data + block_date)
+		hash_instance = str(previous_hash + block_id + str(data) + block_date)
 		final_hash = sha256(bytes(hash_instance, encoding = "utf-8")).hexdigest()
 
 		# new block with hashed special fingerprint
