@@ -1,37 +1,107 @@
-## Welcome to GitHub Pages
+# Blockchain Implementation
 
-You can use the [editor on GitHub](https://github.com/Egesabanci/blockchain/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### **What's inside?**
+This repository contains, simple implementation of Blockchain structure
+with the Flask backend for publishing purposes.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### **What is 'Blockchain'?**
+A blockchain, originally block chain, is a growing list of records, 
+called blocks, that are linked using cryptography. Each block contains 
+a cryptographic hash of the previous block, a timestamp, and transaction 
+data (generally represented as a Merkle tree).
 
-### Markdown
+By design, a blockchain is resistant to modification of its data. This 
+is because once recorded, the data in any given block cannot be altered
+retroactively without alteration of all subsequent blocks. For use as a
+distributed ledger, a blockchain is typically managed by a peer-to-peer 
+network collectively adhering to a protocol for inter-node communication
+and validating new blocks.
+[(Wikipedia Article about Blockchain)](https://en.wikipedia.org/wiki/Blockchain)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+##### **Sample Bitcoin structure** (Created with Blockchain infastructure)
+![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/bitcoin_structure.png)
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### **Installation**
+Firstly, clone this repository with the following command and go into it:
+```
+>>> git clone https://github.com/Egesabanci/blockchain
+>>> cd blockchain
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+After cloning, create virtual environment with the following commands:
+```
+>>> virtualenv .
+>>> cd Scripts
+>>> activate
+>>> cd .. 
+```
 
-### Jekyll Themes
+**If there is an error**, you probably don't have a `virtualenv` package.
+Download `virtualenv` with the command below and try the previous commands again:
+```
+>>> pip install virtualenv
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Egesabanci/blockchain/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Install required packages:
+```
+>>> cd build
+>>> pip install -r requirements.txt
+>>> cd ..
+```
 
-### Support or Contact
+### **Run the server**
+You can run the server on `localhost` with following command
+(Make sure you are in the base folder `blockchain`):
+```
+python run.py
+```
+Also, you can specify the options from `src/config.yml` file.
+Config file looks like this:
+```yaml
+config:
+    port: 8080
+    host: 127.0.0.1
+    debug: True
+    db_name: "blockchain.db"
+    track_modifications: True
+```
+`port`: `localhost` port for running the server  
+`host`: host specification  
+`debug`: debug mode specification for Flask environment  
+`db_name`: database name specification  
+`track_modifications`: database option for `SQLAlchemy` database  
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### **Usage**
+**Use on browser:**  
+After running the server, you can go to the `localhost` link (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:
+![Web Browser GUI](https://github.com/Egesabanci/blockchain/blob/master/images/example.png)
+
+**Use from command-line:**  
+You can also, use it from command-line with some simple commands
+(Make sure you are in the base folder `blockchain`):
+
+**Adding new blocks to the chain:**
+```
+python add.py
+```
+This command adds a new block with default data (Default data: `"No Data."`)  
+You can specify the data that you want to attach to the block, you can use the `--data` flag:
+```
+python add.py --data "Some data for my block"
+```
+
+**Get information from chain:**   
+There are some flags for getting information from chain:  
+	- `num_blocks`: returns number of blocks of the chain  
+ 	- `final_id`: returns the last block's ID  
+ 	- `final_hash`: returns the last block's hash  
+ 	- `final_data`: returns the data of the last block  
+ 	- `final_date`: returns the creation time of the last block  
+ 	- `genesis_hash`: returns the genesis block's hash  
+ 	- `genesis_date`: returns the creation time of the genesis block  
+
+Example for getting information:
+```
+python info.py --num_blocks --final_hash
+```
+This command returns `number of blocks` and `last block's hash`
