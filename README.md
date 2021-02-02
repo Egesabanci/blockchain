@@ -1,10 +1,10 @@
 # Blockchain Implementation
 
-### What's inside?
+### **What's inside?**
 This repository contains, simple implementation of Blockchain structure
 with the simple Flask backend for publishing purposes.
 
-### What is 'Blockchain'?
+### **What is 'Blockchain'?**
 A blockchain, originally block chain, is a growing list of records, 
 called blocks, that are linked using cryptography. Each block contains 
 a cryptographic hash of the previous block, a timestamp, and transaction 
@@ -18,10 +18,10 @@ network collectively adhering to a protocol for inter-node communication
 and validating new blocks.
 [(Wikipedia Article about Blockchain)](https://en.wikipedia.org/wiki/Blockchain)
 
-##### Sample Bitcoin structure (Created with Blockchain infastructure)
+##### **Sample Bitcoin structure** (Created with Blockchain infastructure)
 ![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/bitcoin_structure.png)
 
-### Installation
+### **Installation**
 Firstly, clone this repository with the following command and go into it:
 ```
 >>> git clone https://github.com/Egesabanci/blockchain
@@ -49,7 +49,7 @@ Install required packages:
 >>> cd ..
 ```
 
-### Run the server
+### **Run the server**
 You can run the server on `localhost` with following command
 (Make sure you are in the base folder `blockchain`):
 ```
@@ -71,7 +71,7 @@ config:
 `db_name`: database name specification  
 `track_modifications`: database option for `SQLAlchemy` database  
 
-### Usage
+### **Usage**
 **Use on browser:**  
 After running the server, you can go to the `localhost` link (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:
 Inline-style: 
