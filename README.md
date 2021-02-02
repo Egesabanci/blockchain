@@ -74,12 +74,12 @@ config:
 ### Usage
 There are 2 ways of using:
 
-**Use on browser:**
+**Use on browser:**  
 After running the server, you can go to the `localhost` link (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:
 Inline-style: 
 ![Web Browser GUI](https://github.com/Egesabanci/blockchain/blob/master/images/example.png)
 
-**Use from command-line:**
+**Use from command-line:**  
 You can also, use it from command-line with some simple commands
 (Make sure you are in the base folder `blockchain`):
 
@@ -93,12 +93,12 @@ You can specify the data that you want to attach to the block, you can use the `
 python add.py --data "Some data for my block"
 ```
 
-Get information from chain:
+Get information from chain:   
 There are some flags for getting information from chain:
-	- `num_blocks`: returns number of blocks of the chain
- 	- `final_id`: returns the last block's ID
- 	- `final_hash`: returns the last block's hash
- 	- `final_data`: returns the data of the last block
- 	- `final_date`: returns the addition time of the last block
- 	- `genesis_hash`: returns the genesis block's hash
- 	- `genesis_date`: returns the creation time of the genesis block
+	- `num_blocks`: returns number of blocks of the chain  
+ 	- `final_id`: returns the last block's ID  
+ 	- `final_hash`: returns the last block's hash  
+ 	- `final_data`: returns the data of the last block  
+ 	- `final_date`: returns the creation time of the last block  
+ 	- `genesis_hash`: returns the genesis block's hash  
+ 	- `genesis_date`: returns the creation time of the genesis block  
