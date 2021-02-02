@@ -84,7 +84,7 @@ You can also, use it from command-line with some simple commands
 ```
 python add.py
 ```
-This command adds a new block with default data (Default data: "No Data.")  
+This command adds a new block with default data (Default data: `"No Data."`)  
 You can specify the data that you want to attach to the block, you can use the `--data` flag:
 ```
 python add.py --data "Some data for my block"
