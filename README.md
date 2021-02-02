@@ -52,9 +52,9 @@ Install required packages:
 ### **Run the server**
 You can run the server on `localhost` with following command
 (Make sure you are in the base folder `blockchain`):
-
-	python run.py
-
+```
+>>> python run.py
+```
 Also, you can specify the options from `src/config.yml` file.
 Config file looks like this:
 ```yaml
@@ -72,8 +72,8 @@ config:
 `track_modifications`: database option for `SQLAlchemy` database  
 
 ### **Usage**
-**Use on browser:**  
-After running the server, you can go to the `localhost` link   
+**Use on browser:**    
+After running the server, you can go to the `localhost` link  
 (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:  
 ![Web Browser GUI](https://github.com/Egesabanci/blockchain/blob/master/images/example.png)
 
@@ -82,18 +82,17 @@ You can also, use it from command-line with some simple commands
 (Make sure you are in the base folder `blockchain`):
 
 **Adding new blocks to the chain:**  
-
-	python add.py
-
+```
+>>> python add.py
+```
 This command adds a new block with default data (Default data: `"No Data."`)  
 You can specify the data that you want to attach to the block, you can use the `--data` flag:
-
-	python add.py --data "Some data for my block"
-
+```
+>>> python add.py --data "Some data for my block"
+```
 
 **Get information from chain:**   
-
-There are some flags for getting information from chain:  
+There are some flags for getting information from chain:    
 `num_blocks`: returns number of blocks of the chain  
 `final_id`: returns the last block's ID  
 `final_hash`: returns the last block's hash  
@@ -102,8 +101,8 @@ There are some flags for getting information from chain:
 `genesis_hash`: returns the genesis block's hash  
 `genesis_date`: returns the creation time of the genesis block  
 
-Example for getting information:  
-
-	python info.py --num_blocks --final_hash
-
+Example for getting information:
+```
+>>> python info.py --num_blocks --final_hash
+```
 This command returns `number of blocks` and `last block's hash`
