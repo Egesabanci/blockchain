@@ -73,8 +73,7 @@ config:
 
 ### **Usage**
 **Use on browser:**    
-After running the server, you can go to the `localhost` link  
-(default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:  
+After running the server, you can go to the `localhost` link (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:  
 ![Web Browser GUI](https://github.com/Egesabanci/blockchain/blob/master/images/example.png)
 
 **Use from command-line:**    
