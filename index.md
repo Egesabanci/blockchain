@@ -19,7 +19,7 @@ and validating new blocks.
 [(Wikipedia Article about Blockchain)](https://en.wikipedia.org/wiki/Blockchain)
 
 ##### **Sample Bitcoin structure** (Created with Blockchain infastructure)
-![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/master/images/bitcoin_structure.png)
+![Sample Bitcoin Structure](https://github.com/Egesabanci/blockchain/blob/gh-pages/bitcoin_structure.png)
 
 ### **Installation**
 Firstly, clone this repository with the following command and go into it:
@@ -74,7 +74,7 @@ config:
 ### **Usage**
 **Use on browser:**  
 After running the server, you can go to the `localhost` link (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:
-![Web Browser GUI](https://github.com/Egesabanci/blockchain/blob/master/images/example.png)
+![Web Browser GUI](https://github.com/Egesabanci/blockchain/blob/gh-pages/example.png)
 
 **Use from command-line:**  
 You can also, use it from command-line with some simple commands
