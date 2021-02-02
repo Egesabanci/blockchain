@@ -2,7 +2,7 @@
 
 ### **What's inside?**
 This repository contains, simple implementation of Blockchain structure
-with the simple Flask backend for publishing purposes.
+with the Flask backend for publishing purposes.
 
 ### **What is 'Blockchain'?**
 A blockchain, originally block chain, is a growing list of records, 
