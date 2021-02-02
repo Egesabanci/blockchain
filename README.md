@@ -72,8 +72,6 @@ config:
 `track_modifications`: database option for `SQLAlchemy` database  
 
 ### Usage
-There are 2 ways of using:
-
 **Use on browser:**  
 After running the server, you can go to the `localhost` link (default: `http://127.0.0.1:8080/`) and use it with a simple graphical interface:
 Inline-style: 
@@ -83,7 +81,7 @@ Inline-style:
 You can also, use it from command-line with some simple commands
 (Make sure you are in the base folder `blockchain`):
 
-Adding new blocks to the chain:
+**Adding new blocks to the chain:**
 ```
 python add.py
 ```
@@ -93,8 +91,8 @@ You can specify the data that you want to attach to the block, you can use the `
 python add.py --data "Some data for my block"
 ```
 
-Get information from chain:   
-There are some flags for getting information from chain:
+**Get information from chain:**   
+There are some flags for getting information from chain:  
 	- `num_blocks`: returns number of blocks of the chain  
  	- `final_id`: returns the last block's ID  
  	- `final_hash`: returns the last block's hash  
@@ -102,3 +100,9 @@ There are some flags for getting information from chain:
  	- `final_date`: returns the creation time of the last block  
  	- `genesis_hash`: returns the genesis block's hash  
  	- `genesis_date`: returns the creation time of the genesis block  
+
+Example for getting information:
+```
+python info.py --num_blocks --final_hash
+```
+This command returns `number of blocks` and `last block's hash`
