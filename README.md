@@ -50,8 +50,8 @@ Install required packages:
 ```
 
 ### Run the server
-**NOTE** make sure you are in the base folder (`blockchain`)
-You can run the server on `localhost` with following command:
+You can run the server on `localhost` with following command
+(Make sure you are in the base folder `blockchain`):
 ```
 python run.py
 ```
@@ -66,7 +66,11 @@ config:
     track_modifications: True
 ```
 `port`: `localhost` port for running the server
+
 `host`: host specification
+
 `debug`: debug mode specification for Flask environment
+
 `db_name`: database name specification
+
 `track_modifications`: database option for `SQLAlchemy` database
