@@ -48,3 +48,25 @@ Install required packages:
 >>> pip install -r requirements.txt
 >>> cd ..
 ```
+
+### Run the server
+**NOTE** make sure you are in the base folder (`blockchain`)
+You can run the server on `localhost` with following command:
+```
+python run.py
+```
+Also, you can specify the options from `src/config.yml` file.
+Config file looks like this:
+```yaml
+config:
+    port: 8080
+    host: 127.0.0.1
+    debug: True
+    db_name: "blockchain.db"
+    track_modifications: True
+```
+`port`: `localhost` port for running the server
+`host`: host specification
+`debug`: debug mode specification for Flask environment
+`db_name`: database name specification
+`track_modifications`: database option for `SQLAlchemy` database
