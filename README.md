@@ -65,12 +65,8 @@ config:
     db_name: "blockchain.db"
     track_modifications: True
 ```
-`port`: `localhost` port for running the server
-
-`host`: host specification
-
-`debug`: debug mode specification for Flask environment
-
-`db_name`: database name specification
-
-`track_modifications`: database option for `SQLAlchemy` database
+`port`: `localhost` port for running the server  
+`host`: host specification  
+`debug`: debug mode specification for Flask environment  
+`db_name`: database name specification  
+`track_modifications`: database option for `SQLAlchemy` database  
