@@ -105,3 +105,6 @@ Example for getting information:
 >>> python info.py --num_blocks --final_hash
 ```
 This command returns `number of blocks` and `last block's hash`
+
+## Todo(s):
+- [] Design verification system for adding new blocks to the chain 
