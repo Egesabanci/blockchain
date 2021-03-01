@@ -107,4 +107,4 @@ Example for getting information:
 This command returns `number of blocks` and `last block's hash`
 
 ## Todo(s):
-- [ ] Design verification system for adding new blocks to the chain 
+- [ ] Design a verification system for adding new blocks to the chain 
